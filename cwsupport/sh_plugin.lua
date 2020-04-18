@@ -24,14 +24,12 @@ function PLUGIN:InitializedPlugins()
 			ITEM.name = ammoInfo.name
 			ITEM.ammo = name
 			ITEM.price = ammoInfo.price or 200
+			ITEM.desc = ammoInfo.desc
 			ITEM.model = ammoInfo.model or AMMO_BOX
 			ITEM.isStackable = true
 			ITEM.maxQuantity = ammoInfo.maxQuantity
 			ITEM.exRender = true
 
-			function ITEM:getDesc()
-				return L("ammoDesc", self:getQuantity(), L(self.ammo))
-			end
 		end
 	end
 end
@@ -68,14 +66,12 @@ function PLUGIN:InitializedPlugins()
 			ITEM.name = ammoInfo.name
 			ITEM.ammo = name
 			ITEM.price = ammoInfo.price or 200
+			ITEM.desc = ammoInfo.desc
 			ITEM.model = ammoInfo.model or AMMO_BOX
 			ITEM.isStackable = true
 			ITEM.maxQuantity = ammoInfo.maxQuantity
 			ITEM.exRender = true
 
-			function ITEM:getDesc()
-				return L("ammoDesc", self.getQuantity and self:getQuantity() or "", L(self.ammo))
-			end
 		end
 	end
 

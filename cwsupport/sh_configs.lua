@@ -39,60 +39,65 @@ PLUGIN.changeAmmo = {
 	[".338 Lapua"] = "sniperround",
 }
 
-local AMMO_BOX = "models/Items/BoxSRounds.mdl"
-local AMMO_CASE = "models/Items/357ammo.mdl"
-local AMMO_FLARE = "models/rebel1324/sniperrounds.mdl"
-local AMMO_BIGBOX = "models/Items/BoxMRounds.mdl"
-local AMMO_BUCKSHOT = "models/Items/BoxBuckshot.mdl"
-local AMMO_GREN = "models/Items/AR2_Grenade.mdl"
+local AMMO_BOX = "models/z-o-m-b-i-e/metro_ll/box/m_ll_box_metal_07.mdl"
+local AMMO_CASE = "models/z-o-m-b-i-e/metro_ll/box/m_ll_box_metal_07.mdl"
+local AMMO_FLARE = "models/z-o-m-b-i-e/metro_ll/box/m_ll_box_metal_07.mdl"
+local AMMO_BIGBOX = "models/z-o-m-b-i-e/metro_ll/box/m_ll_box_metal_07.mdl"
+local AMMO_BUCKSHOT = "models/z-o-m-b-i-e/metro_ll/box/m_ll_box_metal_07.mdl"
+local AMMO_GREN = "models/z-o-m-b-i-e/metro_ll/box/m_ll_box_metal_07.mdl"
+local AMMO_AR2AltFire = "models/z-o-m-b-i-e/metro_ll/box/m_ll_box_metal_07.mdl"
 
 PLUGIN.ammoInfo = {}
 PLUGIN.ammoInfo["pistol"] = {
-	name = "Pistol Ammo",
+	name = "Municion de Pistola",
+	desc = "Una caja de municion que contiene 90 balas de pistola",
+	amount = 90,
+	price = 180,
+	model = AMMO_CASE,
+	maxQuantity = 90,
+}
+PLUGIN.ammoInfo["357"] = {
+	name = "Balas de Rodamiento",
 	amount = 30,
 	price = 200,
 	model = AMMO_CASE,
-	maxQuantity = 45,
-}
-PLUGIN.ammoInfo["357"] = {
-	name = "Magnum Ammo",
-	amount = 10,
-	price = 350,
-	model = AMMO_CASE,
-	maxQuantity = 12,
+	maxQuantity = 30,
 }
 PLUGIN.ammoInfo["smg1"] = {
-	name = "Sub Machine Gun Ammo",
-	amount = 30,
-	price = 400,
+	name = "Municion de Subfusil",
+	desc = "Una caja de municion que contiene 90 balas de subfusil",
+	amount = 90,
+	price = 180,
 	model = AMMO_BOX,
-	maxQuantity = 120,
+	maxQuantity = 90,
 }
 PLUGIN.ammoInfo["ar2"] = {
-	name = "Rifle Ammo",
-	amount = 30,
-	price = 400,
+	name = "Municion de Fusil",
+	amount = 90,
+	price = 250,
 	model = AMMO_BIGBOX,
-	maxQuantity = 120,
+	maxQuantity = 90,
 }
 PLUGIN.ammoInfo["buckshot"] = {
-	name = "Shotgun Shells",
-	amount = 10,
-	price = 300,
+	name = "Municion de Escopeta",
+	amount = 24,
+	price = 170,
 	model = AMMO_BUCKSHOT,
-	maxQuantity = 20,
+	maxQuantity = 24,
+}
+PLUGIN.ammoInfo["AR2AltFire"] = {
+	name = "Municion Pesada",
+	amount = 300,
+	price = 250,
+	model = AMMO_AR2AltFire,
+	maxQuantity = 300,
 }
 PLUGIN.ammoInfo["sniperround"] = {
-	name = "Sniper Rounds",
-	amount = 10,
-	price = 500,
+	name = "Municion de Francotirador",
+	amount = 30,
+	price = 210,
 	model = AMMO_FLARE,
-	iconCam = {
-		ang	= Angle(8.4998140335083, 170.05499267578, 0),
-		fov	= 2.1218640972135,
-		pos	= Vector(281.19021606445, -49.330429077148, 45.772754669189)
-	},
-	maxQuantity = 10,
+	maxQuantity = 30,
 }
 
 nut.util.include("presets/sh_defcw.lua")

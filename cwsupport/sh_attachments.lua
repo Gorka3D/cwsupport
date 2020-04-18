@@ -5,86 +5,58 @@ ATTACHMENT_MAGAZINE = 4
 ATTACHMENT_GRIP = 5
 
 local attItems = {}
-attItems.att_rdot = {
-    name = "Red Dot Sight",
-    desc = "attRDotDesc",
+attItems.att_kobra = {
+    name = "Mira Kobra",
+    desc = "Mira reflex.",
     slot = ATTACHMENT_SIGHT,
     attSearch = {
-        "md_aimpoint",
-        "md_microt1",
-        "md_rmr",
+        "kry_metro_kollimator",
     }
 }
-attItems.att_holo = {
-    name = "Holographic Sight",
-    desc = "attHoloDesc",
+attItems.att_scopex2 = {
+    name = "Mira x2",
+    desc = "Mira que tiene x2 de zoom.",
     slot = ATTACHMENT_SIGHT,
     attSearch = {
-        "md_kobra",
-        "md_cobram2",
-        "md_eotech",
+        "kry_metro_optika1",
+        "kry_metro_ventil_optika",
     }
 }
-attItems.att_scope4 = {
-    name = "4x Scope",
-    desc = "attScope4Desc",
+attItems.att_ir = {
+    name = "Mira IR",
+    desc = "Mira infraroja.",
     slot = ATTACHMENT_SIGHT,
     attSearch = {
-        "md_schmidt_shortdot",
-        "md_acog",
+        "kry_metro_optika_ir",
     }
 }
-attItems.att_scope8 = {
-    name = "8x Scope",
-    desc = "attScope8Desc",
-    slot = ATTACHMENT_SIGHT,
-    attSearch = {
-        "md_pso1",
-        "bg_sg1scope",
-        "md_nightforce_nxs",
-    }
-}
-attItems.att_muzsup = {
-    name = "Suppressor",
-    desc = "attSupDesc",
+attItems.att_sup = {
+    name = "Silenciador",
+    desc = "Reduce considerablemente el ruido de salida.",
     slot = ATTACHMENT_BARREL,
     attSearch = {
-        "md_saker",
-        "md_tundra9mm",
-        "md_pbs1",
+        "kry_metro_duplet_silencer",
+        "kry_metro_glushak",
+        "kry_metro_glushak_revolver",
     },
 }
-attItems.att_exmag = {
-    name = "Extended Mag",
-    desc = "attEMagDesc",
-    slot = ATTACHMENT_MAGAZINE,
-    attSearch = {
-    }
-}
-attItems.att_foregrip = {
-    name = "Foregrip",
-    desc = "attForeDesc",
-    slot = ATTACHMENT_GRIP,
-    attSearch = {
-        "md_foregrip",
-    }
-}
 attItems.att_laser = {
-    name = "Laser Sight",
-    desc = "attLaserDesc",
+    name = "Puntero Laser",
+    desc = "Emite una luz roja.",
     slot = ATTACHMENT_LASER,
     attSearch = {
-        "md_anpeq15",
-        "md_insight_x2",
+        "kry_metro_laser",
     }
 }
-attItems.att_bipod = {
-    name = "Bipod",
-    desc = "attBipodDesc",
-    slot = ATTACHMENT_GRIP,
+attItems.att_mag = {
+    name = "Cargador Ampliado",
+    desc = "Aumenta la capacidad del balas del cargador.",
+    slot = ATTACHMENT_MAGAZINE,
     attSearch = {
-        "bg_bipod",
-        "md_bipod",
+        "kry_metro_ak_mag_45",
+        "kry_metro_ak_mag_60",
+        "kry_metro_saiga_mag_20",
+        "kry_metro_ventil_mag",
     }
 }
 
@@ -189,7 +161,7 @@ for className, v in pairs(attItems) do
 	local ITEM = nut.item.register(className, nil, nil, nil, true)
 	ITEM.name = className
 	ITEM.desc = v.desc
-	ITEM.price = 300
+	ITEM.price = 1000
 	ITEM.model = "models/Items/BoxSRounds.mdl"
 	ITEM.width = 1
 	ITEM.height = 1
